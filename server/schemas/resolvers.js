@@ -3,11 +3,11 @@ const { Book, User } = require('../models');
 const resolvers = {
   Query: {
     book: async () => {
-      return book.find({});
+      return Book.find({});
     },
     user: async (parent, { _id }) => {
       const params = _id ? { _id } : {};
-      return User.find(params);
+      return user.find(params);
     },
   },
   Mutation: {
